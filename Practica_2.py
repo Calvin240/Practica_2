@@ -252,21 +252,6 @@ cv2.destroyWindow('Traslacion a fin 3')
 
     #METODO 1
 
-def transponer(rimg_1):
-    t = []
-    for i in range(len(rimg_1[0])):
-        t.append([])
-        for j in range(len(rimg_1)):
-            t[i].append(rimg_1[j][i])
-    return t
-c = np.concatenate(transponer(rimg_1),axis=1)
-#cv2.imshow('Transpuesta 1', c)
-#cv2.waitKey(0) #Retardo
-#cv2.destroyAllWindows()
-
-
-    #METODO 2
-
 transpuesta = cv2.transpose(rimg_1)
 cv2.imshow('Transpuesta 2', transpuesta)
 cv2.waitKey(0) #Retardo
